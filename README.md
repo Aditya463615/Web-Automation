@@ -38,3 +38,4 @@ document.querySelector(`<selector>`).value = `<value>`;
 ```Javascript
 return(<your Data from page>)
 ```
+### [Know more about Javascript](https://www.w3schools.com/js/)
