@@ -88,3 +88,4 @@ alert_is_present
 '''
 ```
 ### [Know more about Javascript](https://www.w3schools.com/js/)
+### [Know more about Selenium](https://selenium-python.readthedocs.io/)
