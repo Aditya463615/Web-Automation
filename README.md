@@ -14,6 +14,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 ```
 ```python
+driver = webdriver.Chrome()
+url = r'https://www.example.com/'
+driver.get(url)
+```
+```python
 class automation:
     def __init__(self, url, browser='Chrome'):
         self.driver = webdriver.Chrome()
@@ -74,25 +79,127 @@ try:
 finally:
     driver.quit()
 # other conditions to wait
-'''
-title_is
-title_contains
-presence_of_element_located
-visibility_of_element_located
-visibility_of
-presence_of_all_elements_located
-text_to_be_present_in_element
-text_to_be_present_in_element_value
-frame_to_be_available_and_switch_to_it
-invisibility_of_element_located
-element_to_be_clickable
-staleness_of
-element_to_be_selected
-element_located_to_be_selected
-element_selection_state_to_be
-element_located_selection_state_to_be
-alert_is_present
-'''
+```
+> [!TIP]
+> title_is
+```python
+element = WebDriverWait(driver, 10).until(
+    EC.title_is("expected title")
+)
+```
+> [!TIP]
+> title_contains
+```python
+element = WebDriverWait(driver, 10).until(
+    EC.title_contains("expected title")
+)
+```
+> [!TIP]
+> presence_of_element_located
+```python
+element = WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.ID, "myDynamicElement"))
+)
+```
+> [!TIP]
+> visibility_of_element_located
+```python
+element = WebDriverWait(driver, 10).until(
+    EC.visibility_of_element_located((By.ID, "myDynamicElement"))
+)
+```
+> [!TIP]
+> visibility_of
+```python
+element = WebDriverWait(driver, 10).until(
+    EC.visibility_of(driver.find_element_by_id("myDynamicElement"))
+)
+```
+> [!TIP]
+> presence_of_all_elements_located
+```python
+elements = WebDriverWait(driver, 10).until(
+    EC.presence_of_all_elements_located((By.ID, "myDynamicElement"))
+)
+```
+> [!TIP]
+> text_to_be_present_in_element
+```python
+element = WebDriverWait(driver, 10).until(
+    EC.text_to_be_present_in_element((By.ID, "myDynamicElement"), "expected text")
+)
+```
+> [!TIP]
+> text_to_be_present_in_element_value
+```python
+element = WebDriverWait(driver, 10).until(
+    EC.text_to_be_present_in_element_value((By.ID, "myDynamicElement"), "expected text")
+)
+```
+> [!TIP]
+> frame_to_be_available_and_switch_to_it
+```python
+WebDriverWait(driver, 10).until(
+    EC.frame_to_be_available_and_switch_to_it((By.ID, "myDynamicFrame"))
+)
+```
+> [!TIP]
+> invisibility_of_element_located
+```python
+WebDriverWait(driver, 10).until(
+    EC.invisibility_of_element_located((By.ID, "myDynamicElement"))
+)
+```
+> [!TIP]
+> element_to_be_clickable
+```python
+element = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.ID, "myDynamicElement"))
+)
+```
+> [!TIP]
+> staleness_of
+```python
+WebDriverWait(driver, 10).until(
+    EC.staleness_of(driver.find_element_by_id("myDynamicElement"))
+)
+```
+> [!TIP]
+> element_to_be_selected
+```python
+WebDriverWait(driver, 10).until(
+    EC.element_to_be_selected((By.ID, "myDynamicElement"))
+)
+```
+> [!TIP]
+> element_located_to_be_selected
+```python
+WebDriverWait(driver, 10).until(
+    EC.element_located_to_be_selected((By.ID, "myDynamicElement"))
+)
+```
+> [!TIP]
+> element_selection_state_to_be
+```python
+WebDriverWait(driver, 10).until(
+    EC.element_selection_state_to_be(
+        (By.ID, "myDynamicElement"), "all"
+    )
+)
+```
+> [!TIP]
+> element_located_selection_state_to_be
+```python
+WebDriverWait(driver, 10).until(
+    EC.element_located_selection_state_to_be(
+        (By.ID, "myDynamicElement"), "all"
+    )
+)
+```
+> [!TIP]
+> alert_is_present
+```python
+WebDriverWait(driver, 10).
 ```
 ### [Know more about Javascript](https://www.w3schools.com/js/)
 ### [Know more about Selenium](https://selenium-python.readthedocs.io/)
