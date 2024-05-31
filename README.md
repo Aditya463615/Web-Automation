@@ -82,11 +82,11 @@ finally:
 ```
 > [!TIP]
 > title_is
-```python
+  ```python
 element = WebDriverWait(driver, 10).until(
     EC.title_is("expected title")
 )
-```
+  ```
 > [!TIP]
 > title_contains
 ```python
